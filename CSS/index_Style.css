@@ -22,7 +22,8 @@ body{
 .Header{
     height: 70px;
    position: fixed;
-   display: block;
+   display: flex;
+   flex-direction: row;
    width: 100%;
    backdrop-filter: blur(5px);
    background-color: rgba(0, 0, 0, 0.336);
@@ -38,6 +39,12 @@ body{
     margin-left: 21%;
     font-family: HeaderFont;
     font-size: 18px;
+
+}
+
+.Header p{
+    font-family: HeaderFont;
+    color: rgba(128, 128, 128, 0.637);
 
 }
 
@@ -72,4 +79,41 @@ body{
 
 #active{
     color: rgb(17, 165, 11);
+}
+
+@media screen and (max-width: 1500px) {
+    .space{
+        font-size: 46px;    
+    }
+
+    .intel{
+        font-size: 46px;
+        margin-top: -10%;
+    }
+
+    .background {
+        display: block;
+        
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .space{
+        font-size: 46px;
+        height: 10%;    
+    }
+
+    .intel{
+        font-size: 46px;
+        margin-top: -10%;
+        margin-left: 7%;
+        height: 10%;
+    }
+
+    .background {
+        display: block;
+        
+    }
+
 }
