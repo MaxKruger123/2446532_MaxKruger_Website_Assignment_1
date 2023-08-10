@@ -1,6 +1,8 @@
 body{
     background-image: url(images/SpaceManV2.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
     margin: 0;
     height: 1000px;
     width: 100%;
@@ -11,19 +13,19 @@ body{
 
 .background{    
     margin-top: 5%;
-    height: 100%;
+    height: 70%;
     width: 100%;
     
     color: white;
     
-    display: flex;    
+    display: block;    
 }
 
 .Header{
     height: 70px;
    position: fixed;
-   display: flex;
-   flex-direction: row;
+   display: inline;
+  
    width: 100%;
    backdrop-filter: blur(5px);
    background-color: rgba(0, 0, 0, 0.336);
@@ -42,11 +44,6 @@ body{
 
 }
 
-.Header p{
-    font-family: HeaderFont;
-    color: rgba(128, 128, 128, 0.637);
-
-}
 
 @font-face {
     font-family: Entanglement;
@@ -58,6 +55,11 @@ body{
     src: url(Fonts/Vonique\ 92_D.otf);
   }
 
+  @font-face {
+    font-family: ComfortFont;
+    src: url(Fonts/Comfortaa-Light.ttf);
+  }
+
 .space{
  margin-top: 15%;
  margin-left: 7%;
@@ -67,9 +69,10 @@ body{
  font-family: Entanglement;
  
 }
+
 .intel{
-    margin-top: 15%;
-    margin-left: 30%;
+    margin-top: -12.5%;
+    margin-left: 67%;
     width: 35%;
     height: 20%;
     font-size: 72px;
@@ -78,7 +81,29 @@ body{
    }
 
 #active{
-    color: rgb(17, 165, 11);
+    color: rgb(255, 230, 1);
+   
+   
+}
+
+.info1{
+    
+    width: 100%;
+    height: 30%;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 40%;    
+    backdrop-filter: blur(5px);
+    display: block;
+    background-color: white;
+    font-family: ComfortFont;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    
+    
+}
+
+.info1 h2{
+    margin-left: 45%;
 }
 
 @media screen and (max-width: 1500px) {
@@ -88,7 +113,8 @@ body{
 
     .intel{
         font-size: 46px;
-        margin-top: -10%;
+        margin-top: -5%;
+        margin-left: 20%;
     }
 
     .background {
@@ -116,4 +142,47 @@ body{
         
     }
 
+}
+
+@media screen and (max-width: 1025px) {
+    .Header button{
+        margin-left: 15%;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .Header button{
+        margin-left: 10%;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .Header button{
+        margin-left: 4%;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .Header button{
+        margin-left: 1%;
+        font-size: 12px;
+    }
+
+}
+
+.Blogs:hover{
+    
+    
+    color: rgb(255, 230, 1);
+
+}
+
+.Design:hover{
+    
+    
+    color: rgb(255, 230, 1);
+    
 }
