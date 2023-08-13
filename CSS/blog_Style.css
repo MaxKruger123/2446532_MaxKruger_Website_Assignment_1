@@ -55,26 +55,103 @@ html{
 
 }
 
+@font-face {
+    font-family: BlogFont;
+    src: url(Fonts/Agelast-mLlAm.otf);
+  }
+
 .blog1{
     width: 60%;
     height: 60%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(250, 225, 0);
     margin-top: 10%;
     display: flex;
     color: white;
-    font-family: ComfortFont;
+    
     margin-left: 20%;
+    padding: 20px 20px;
+}
+
+.blog1 h2{
+    font-family: BlogFont;
+}
+
+.blog1 p{
+    font-family: ComfortFont;
+}
+
+.blog1 a{
+ font-family: ComfortFont;
+}
+
+
+.blog1:hover{
+    background-color: rgba(44, 44, 44, 0.575);
+    transition: 0.8s;
+    border-radius: 20px;
+    
+}
+
+.blog1:not(:hover){
+    background-color: rgba(26, 26, 26, 0.5);
+    transition: 0.8s;
+    border-radius: 20px;
+}
+
+.blog2{
+    width: 60%;
+    height: 20%;
+    background-color: rgba(26, 26, 26, 0.5);
+    margin-top: 5%;
+    display: flex;
+    color: white;
+    
+    margin-left: 20%;
+    padding: 20px 20px;
+    border-radius: 20px;
+    
+    
+}
+
+.blog2:hover{
+    background-color: rgba(44, 44, 44, 0.575);
+    transition: 0.8s;
+    border-radius: 20px;
+    
+}
+
+.blog2:not(:hover){
+    background-color: rgba(26, 26, 26, 0.5);
+    transition: 0.8s;
+    border-radius: 20px;
+}
+
+.intext2{
+    margin-left: 5%;
+}
+.blog2 h2{
+    font-family: BlogFont;
+}
+
+.blog2 p{
+    font-family: ComfortFont;
+}
+
+#CheckOut{
+    text-decoration: underline;
+    color: rgb(250, 225, 0);
 }
 
 #img1{
- margin-right: 10%;
- width: 35%;
-height: 85%; 
+ margin-right: 8%;
+ width: 40%;
+height: 90%; 
 margin-top: 3%;
 }
 
 .intext{
     margin-top: 35%;
+    padding: 5px 10px;
 }
 
 

@@ -55,6 +55,8 @@ html{
     src: url(Fonts/Entanglement-rgpRB.ttf);
   }
 
+ 
+
   @font-face {
     font-family: HeaderFont;
     src: url(Fonts/Vonique\ 92_D.otf);
@@ -99,9 +101,9 @@ html{
     margin-top: 40%;    
     
     display: block;
-    background-color: white;
+    background-color: rgba(44, 44, 44, 0.575);
     font-family: ComfortFont;
-    color: black;
+    color: white;
     
     line-height: 30px;
     
@@ -128,9 +130,9 @@ html{
     margin-top: 5%;    
     
     
-    background-color: white;
+    background-color: rgba(44, 44, 44, 0.575);
     font-family: ComfortFont;
-    color: black;
+    color: white;
    
     line-height: 30px;
     display: flex;
@@ -162,9 +164,9 @@ html{
     margin-top: 5%;    
     
     
-    background-color: white;
+    background-color: rgba(44, 44, 44, 0.575);
     font-family: ComfortFont;
-    color: black;
+    color: white;
    
     line-height: 30px;
     display: flex;
@@ -195,9 +197,9 @@ html{
     margin-top: 5%;    
     
     
-    background-color: white;
+    background-color: rgba(44, 44, 44, 0.575);
     font-family: ComfortFont;
-    color: black;
+    color: white;
    
     line-height: 30px;
     display: flex;
@@ -228,9 +230,9 @@ html{
     margin-top: 5%;    
     
     
-    background-color: white;
+    background-color: rgba(44, 44, 44, 0.575);
     font-family: ComfortFont;
-    color: black;
+    color: white;
    
     line-height: 30px;
     display: flex;
