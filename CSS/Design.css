@@ -1,0 +1,267 @@
+body{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    margin: 0;
+    height: 1000px;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+html{
+    width: 100%;
+}
+
+.background{    
+    margin-top: 5%;
+    height: 70%;
+    width: 100%;
+    
+    color: black;
+    
+    display: block;    
+}
+
+.Header{
+   height: 70px;
+   position: fixed;
+   display: inline;
+  
+   width: 100%;
+   backdrop-filter: blur(5px);
+   background-color: rgba(0, 0, 0, 0.336);
+   box-shadow: 0 0 25px 25px;
+}
+
+.Header button{
+    margin-top: 1%;
+    text-decoration:none;
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 19%;
+    font-family: HeaderFont;
+    font-size: 18px;
+
+}
+
+.contents{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.WireFrames{
+    color: white;
+    margin-top: 10%;
+    display: block;
+    padding: 30px 30px;
+    background-color: rgba(44, 44, 44, 0.575);
+    width: 85%;
+    margin-left: 5%;
+    border-radius: 30px;
+
+
+}
+.WireFrames h1{
+    margin-left: 40%;
+    font-size: 36px;
+    font-family: HeaderFont;
+}
+
+.WireFrames h2{
+    margin-left: 43%;
+    font-family: BlogFont;
+}
+
+.WireFrames p{
+    font-family: ComfortFont;
+    line-height: 30px;
+}
+
+#indexImg{
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+}
+
+#BlogsImg{
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+}
+
+#bloghole{
+    margin-left: 38%;
+}
+
+#DesignPage{
+    margin-left: 38%;
+}
+
+.StyleGuide{
+    width: 100%;
+    height: 20%;
+    color: white;
+}
+
+.StyleGuide{
+    color: white;
+    margin-top: 10%;
+    display: block;
+    padding: 30px 30px;
+    background-color: rgba(44, 44, 44, 0.575);
+    width: 85%;
+    margin-left: 5%;
+    border-radius: 30px;
+    height: 100%;
+}
+
+.StyleGuide h1{
+    font-family: HeaderFont;
+    margin-left: 45%;
+}
+
+.StyleGuide p{
+    font-family: ComfortFont;
+    line-height: 30px;
+}
+
+
+@font-face {
+    font-family: BlogFont;
+    src: url(Fonts/Agelast-mLlAm.otf);
+  }
+
+
+
+
+
+@font-face {
+    font-family: Entanglement;
+    src: url(Fonts/Entanglement-rgpRB.ttf);
+  }
+
+  @font-face {
+    font-family: HeaderFont;
+    src: url(Fonts/Vonique\ 92_D.otf);
+  }
+
+  @font-face {
+    font-family: ComfortFont;
+    src: url(Fonts/Comfortaa-Light.ttf);
+  }
+
+
+
+
+
+#active{
+    color: rgb(255, 230, 1);
+   
+   
+}
+
+
+
+
+@media screen and (max-width: 1500px) {
+    .space{
+        font-size: 46px;    
+    }
+
+    .intel{
+        font-size: 46px;
+        margin-top: -5%;
+        margin-left: 20%;
+    }
+
+    .background {
+        display: block;
+        
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .space{
+        font-size: 46px;
+        height: 10%;    
+    }
+
+    .intel{
+        font-size: 46px;
+        margin-top: -10%;
+        margin-left: 7%;
+        height: 10%;
+    }
+
+    .background {
+        display: block;
+        
+    }
+
+}
+
+@media screen and (max-width: 1025px) {
+    .Header button{
+        margin-left: 15%;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .Header button{
+        margin-left: 10%;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .Header button{
+        margin-left: 4%;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .Header button{
+        margin-left: 1%;
+        font-size: 12px;
+    }
+
+}
+
+#HomePage:hover{   
+    
+    color: rgb(255, 230, 1);
+    font-size: 20px;
+    
+    transition: 0.5s;
+}
+
+
+#HomePage:not(:hover){
+    
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+#Blogs:hover{
+    color: rgb(255, 230, 1);
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+#Blogs:not(:hover){
+    
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+

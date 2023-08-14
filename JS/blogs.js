@@ -12,3 +12,12 @@ function ChangToBlogPosts(){
     window.location.replace("Blogs.html");
 }
 
+function ChangToDesignPage(){
+    window.location.replace("Design.html");
+}
+
+
+
+
+
+

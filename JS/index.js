@@ -1,6 +1,10 @@
 function ChangeToBlogPage() {
-    window.location.replace("Blogs.html")
+    window.location.replace("Blogs.html");
     
+}
+
+function ChangeToDesignPage(){
+    window.location.replace("Design.html");
 }
 
 
