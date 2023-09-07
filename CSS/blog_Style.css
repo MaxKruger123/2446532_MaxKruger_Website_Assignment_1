@@ -76,6 +76,11 @@ html{
     font-family: BlogFont;
 }
 
+.blog1 h1{
+    font-family: BlogFont;
+    font-size: 46px;
+}
+
 .blog1 p{
     font-family: ComfortFont;
 }
@@ -150,8 +155,12 @@ margin-top: 3%;
 }
 
 .intext{
-    margin-top: 35%;
+    margin-top: 20%;
     padding: 5px 10px;
+}
+
+#Mark{
+    background-color: gray;
 }
 
 

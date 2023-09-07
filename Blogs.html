@@ -10,38 +10,40 @@
 </head>
 <body>
 
-    <header class="Header">        
-        <button id="HomePage" onclick="ChangeToHomePage()">Home Planet</button>
-        <button id="active">The Blog Hole</button>
-        <button class="Design" onclick="ChangToDesignPage()">Designing Mars</button>
-        
+    <header class="Header">     
+        <nav> 
+            <button id="HomePage" onclick="ChangeToHomePage()">Home Planet</button>
+            <button id="active">The Blog Hole</button>
+            <button class="Design" onclick="ChangToDesignPage()">Designing Mars</button>
+        </nav>  
 
     </header>
 
-    <div class="Contents e-content">
+    <section class="Contents e-content">
 
         <article class="blog1" onclick="ChangeToBlog1()">
-            <div class="intext">
-                <h2>Blog 1 - Data Visualization</h2>
-                <p>This weeks blog post is all about Data Visualization. In this Blog I give an overview of a text that comes from a book called 'Embodying Data'. I analyze this text share my findings whilst giving an example of a real world use of Data Visualization.</p>
+            <section class="intext">
+                <h1>Blog 1 - Data Visualization</h1>
+                <time datetime="2023-08-27 20:00"><p>This weeks blog post is all about <mark id="Mark">Data Visualization.</mark> In this Blog I give an overview of a text that comes from a book called 'Embodying Data'. I analyze this text share my findings whilst giving an example of a real world use of Data Visualization.</p></time>
                 <a href="blog1.html" id="CheckOut">Check Out</a>
-            </div>
+                
+            </section>
             <img src="CSS/images/Fossil-Fuels.png" alt="Image of the planet mars" id="img1" class="u-photo">
         </article>
 
         <article class="blog2">
             <img src="CSS/images/UI.png" alt="Image of the planet mars" id="img2" class="u-photo">
-            <div class="intext2">
+            <section class="intext2">
                 <h2>Blog 2 - Critical Reflection - UI and UX</h2>
-                <p>Coming Soon...</p>
+                <p><mark id="Mark">Coming Soon...</mark></p>
                 
-            </div>
+            </section>
             
         </article>
         <p id="lmao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis soluta aliquam inventore corporis iure id sed voluptatum perferendis provident obcaecati, accusantium labore, nam fuga voluptas ea mollitia! Perspiciatis, veritatis dignissimos.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui repellat reprehenderit veniam amet nobis, voluptates quas quam accusamus quibusdam consectetur ducimus corporis voluptatem, molestiae repellendus perferendis, cumque quaerat neque at.</p>
 
 
-    </div>
+    </section>
     
 </body>
 <script src="JS/blogs.js"></script>

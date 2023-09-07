@@ -133,7 +133,10 @@ html{
     transition: 0.5s;
 }
 
-
+#Details{
+    margin: 5%;
+    font-family: ComfortFont;
+}
 
 
 @media screen and (max-width: 1500px) {
