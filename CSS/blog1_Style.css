@@ -49,7 +49,7 @@ html{
 
 }
 
-.info{
+.Info{
     display: block;
     color: white;
     width: 90%;
@@ -58,19 +58,19 @@ html{
     background-color: rgba(26, 26, 26, 0.5);
 }
 
-#img1{
+#Img1{
     width: 40%;
     height: auto;
     margin-left: 30%;
     margin-top: 5%;
 }
 
-#heading{
+#Heading{
     font-family: BlogFont;
     margin-left: 24%;
 }
 
-#intext{
+#Intext{
     padding: 40px 40px;
     font-family: ComfortFont;
     line-height: 30px;
@@ -113,7 +113,7 @@ html{
    
 }
 
-#return{
+#Return{
     color: rgb(255, 230, 1);
     background-color: rgb(65, 64, 64);
     border: none;
@@ -123,12 +123,12 @@ html{
     margin-top: 5%;
 }
 
-#return:hover{
+#Return:hover{
     padding: 30px 40px;
     transition: 0.5s;
 }
 
-#return:not(:hover){
+#Return:not(:hover){
     padding: 20px 30px;
     transition: 0.5s;
 }
@@ -138,6 +138,27 @@ html{
     font-family: ComfortFont;
 }
 
+#ScrollToTop{
+    display: none;
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: 2px solid green; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgba(44, 44, 44, 0.575); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  
+  }
+  
+  
+  .Footer{
+      position: fixed;
+  }
 
 @media screen and (max-width: 1500px) {
     .space{
@@ -235,12 +256,12 @@ html{
     transition: 0.5s;
 }
 
-#active:hover{
+#Active:hover{
     font-size: 20px;
     transition: 0.5s;
 }
 
-#active:not(:hover){
+#Active:not(:hover){
     font-size: 16px;
     transition: 0.5s;
 }

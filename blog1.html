@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The home page of Space intel's website where I have a range of different pages all about learning data visualization and the developpment of this page.">
+    <meta name="keywords" content="Blogs, Data, Visualization, UI, UX">
+    <meta name="author"  content="Max Kruger">
+    
+    
     <title>Space-Intel Blogs</title>
     <link rel="stylesheet" href="CSS/blog1_Style.css">
     
@@ -14,17 +19,17 @@
     <header class="Header">  
         <nav>  
             <button id="HomePage" onclick="ChangeToHomePage()">Home Planet</button>
-            <button id="active" onclick="ChangToBlogPosts()">The Blog Hole</button>
+            <button id="Active" onclick="ChangToBlogPosts()">The Blog Hole</button>
             <button class="Design" onclick="ChangToDesignPage()">Designing Mars</button>
         </nav>    
 
     </header>
 
-    <article class="info e-content">
-        <img src="CSS/images/Fossil-Fuels.png" alt="Data Visualization Image of fossil fuels" id="img1" class="u-photo">
-        <button id="return" onclick="ChangToBlogPosts()">Return to blogs</button>
-        <h2 id="heading">Blog Post 1 - Understanding Data Visualization through an example</h2>
-        <p id="intext" class="p-summary">After reading Chapter 2 of Li’s book ‘Embodying Data’, I had a better grasp of what Data Visualization is but still wanted a specific real-world example of how it is used. I searched the web for examples until I found one that really surprised me. Many researchers have defined Data Visualization with complex definitions but I found that Bikaki’s definition is best suited for those who do not yet understand d+ata visualization. This essay covers Chapter 2 of Li’s book where he first looks at what Data Visualization is. Second, the different aspects of Data Visualization. Third, the difference between data and information. Lastly, my findings with a specific example of how Netflix successfully uses Data Visualization. <br><br>
+    <article class="Info e-content">
+        <img src="CSS/images/Fossil-Fuels.png" alt="Data Visualization Image of fossil fuels" id="Img1" class="u-photo">
+        <button id="Return" onclick="ChangToBlogPosts()">Return to blogs</button>
+        <h2 id="Heading">Blog Post 1 - Understanding Data Visualization through an example</h2>
+        <p id="Intext" class="p-summary">After reading Chapter 2 of Li’s book ‘Embodying Data’, I had a better grasp of what Data Visualization is but still wanted a specific real-world example of how it is used. I searched the web for examples until I found one that really surprised me. Many researchers have defined Data Visualization with complex definitions but I found that Bikaki’s definition is best suited for those who do not yet understand d+ata visualization. This essay covers Chapter 2 of Li’s book where he first looks at what Data Visualization is. Second, the different aspects of Data Visualization. Third, the difference between data and information. Lastly, my findings with a specific example of how Netflix successfully uses Data Visualization. <br><br>
             In Li’s book ‘Embodying Data’, Chapter 2, he considers many definitions of Data Visualization. However, I found his final mentioned definition to be the most fitting. Bikakis defines Data Visualization as “the presentation of data in a pictorial or graphical format” (Li, 2020). Most of the definitions Li refers to include the link between data and computer technology in order to transform the data into some sort of visual form. Nonetheless, I feel that Bikakis’s definition is simple enough to understand even if an individual has no prior knowledge of Data Visualization. The other definitions provided are more complex and suited to groups with a prior understanding of Data Visualization because some words require a higher cognitive ability. This is seen in words such as “quantified data”. Furthermore, Bikakis states that Data Visualization provides users with an “intuitive means” to analyze and explore data which then allows users to identify patterns and correlations, and supports “sense-making activities” (Li, 2020). <br><br>
             Li says that in modern times, Data Visualization consists of four different aspects. The first is real-time interaction. At first, I did not understand what this meant, however, upon further research I learned that real-time data visualization lets the pictorial data representation update in real-time, enabling stakeholders to make decisions based on actual data rather than a feeling or intuition. Personally, I see this in South Africa with the national elections. In real time, voters vote for the next president and on News24 there is a visual representation of the live vote numbers in the different provinces. This allows the government to make a decision on actual data. The second aspect mentioned by Li is on-the-fly visualizations which is the ability to present your data whenever you want (on-the-fly). The third aspect is visual scalability which refers to the capability of visualization tools to effectively display large datasets (Ludichart, The power of real-time data visualization)—finally, user assistance and personalization. I think different people prefer different visuals to portray data, for example, I may prefer a pie chart but my girlfriend may prefer bar graphs. Changing the visual presentations to what suits a user the best may lead to faster understanding and easier pattern recognition. <br><br>
             Moreover, data visualization can be divided into two types of visualization forms. Information visualization refers to more abstract data that is being visually presented and Scientific visualization uses scientific data. Both of these forms include how to visually present data and the transformation of data into information. The difference between data and information is something that I have had to study since high school IT. To my knowledge data is unprocessed information without any meaning. An example of data would be a bunch of numbers in an Excel sheet at random positions. They are just numbers and do not mean anything. However, if we were to assign each number a name next to it with a heading at the very top of the Excel page that says “Age of participants,” then we have processed data which is then referred to as information since we as the user can now understand that the numbers have a meaning. 
@@ -52,8 +57,13 @@
              
     </article>
 
+    <footer class="Footer">
     
+        <button onclick="topFunction()" id="ScrollToTop" title="Go to top">Back To Top</button>
+    
+    </footer>
     
 </body>
 <script src="JS/blog1.js"></script>
+<script src="JS/Scroll.js"></script>
 </html>

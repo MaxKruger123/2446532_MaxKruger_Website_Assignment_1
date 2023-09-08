@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The home page of Space intel's website where I have a range of different pages all about learning data visualization and the developpment of this page.">
+    <meta name="keywords" content="Blogs, Data, Visualization, UI, UX">
+    <meta name="author"  content="Max Kruger">
+
     <title>Space-Intel Blogs</title>
     <link rel="stylesheet" href="CSS/Design.css">
     
@@ -14,24 +18,24 @@
         <nav>  
             <button id="HomePage" onclick="ChangeToHomePage()">Home Planet</button>
             <button id="Blogs" onclick="ChangToBlogPosts()">The Blog Hole</button>
-            <button id="active">Designing Mars</button>
+            <button id="Active">Designing Mars</button>
         </nav>   
 
     </header>
 
-    <div class="Contents e-content">
+    <section class="Contents e-content">
         <article class="WireFrames">
             <h1>WiresFrames</h1>
             <p class="p-summary">My first WireFrame is the index or homepage. I wanted it to feel very sleek and simplistic or minimalistic in its design. I also wanted the all of my pages t be easy on they eye and satisfying to look at, overall making users want to explore the website further.</p>
             <h2>Index WifreFrame</h2>
-            <img src="CSS/images/Index.jpg" alt="Image of index page wireframe" id="indexImg" class="u-photo">
+            <img src="CSS/images/Index.jpg" alt="Image of index page wireframe" id="IndexImg" class="u-photo">
             <br><br><br><br>
 
-            <h2 id="bloghole">The Blog Hole WireFrame</h2>
+            <h2 id="Bloghole">The Blog Hole WireFrame</h2>
             <p lass="p-summary">This page was inspired by a minimalistic black blog page that I stumbled upon. It has an interesting format where the latest blog is at the top of the page and the rest are below it and are smaller but users can still interacct with them.</p>
             <img src="CSS/images/Blog.jpg" alt="Image of the Blog Hole Wireframe" id="BlogsImg" class="u-photo">
 
-            <h2 id="blog11">The Blog 1 WireFrame</h2>
+            <h2 id="Blog11">The Blog 1 WireFrame</h2>
             <p lass="p-summary">This is another simple page that contains the actual blog post with an image at the top that represents whatever the blog is about. There is also a return button that returns the user to the blogs page.</p>
             <img src="CSS/images/BlogPost.jpg" alt="Image of actual Blog Postpage wireframe" id="BlogsImg" class="u-photo">
 
@@ -55,8 +59,15 @@
         
 
 
-    </div>
+    </section>
+
+    <footer class="Footer">
+    
+        <button onclick="topFunction()" id="ScrollToTop" title="Go to top">Back To Top</button>
+    
+    </footer>
     
 </body>
+<script src="JS/Scroll.js"></script>
 <script src="JS/blogs.js"></script>
 </html>

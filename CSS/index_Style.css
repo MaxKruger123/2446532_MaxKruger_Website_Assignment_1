@@ -16,7 +16,7 @@ html{
     width: 100%;
 }
 
-.background{    
+.Background{    
     margin-top: 5%;
     height: 70%;
     width: 100%;
@@ -67,7 +67,7 @@ html{
     src: url(Fonts/Comfortaa-Light.ttf);
   }
 
-.space{
+.Space{
  margin-top: 15%;
  margin-left: 17%;
  width: 35%;
@@ -77,7 +77,7 @@ html{
  
 }
 
-.intel{
+.Intel{
     margin-top: -12.5%;
     margin-left: 67%;
     width: 28%;
@@ -93,7 +93,7 @@ html{
    
 }
 
-.info1{
+.Info1{
     
     width: 100%;
     height: 30%;
@@ -110,19 +110,19 @@ html{
     overflow: auto;
 }
 
-.info1 h2{
+.Info1 h2{
     margin-left: 45%;
     font-size: 32px;
     padding: 10px 10px;
 }
 
-.info1 p{
+.Info1 p{
     padding: 10px 10px;
     margin-left: 5%;
     
 }
 
-.info2{
+.Info2{
     
     width: 100%;
     height: 50%;
@@ -140,13 +140,13 @@ html{
     
 }
 
-.info2 h2{
+.Info2 h2{
     margin-left: 45%;
     font-size: 32px;
     
 }
 
-.info2 p{
+.Info2 p{
     margin-left: 5%;
     overflow: auto;
 }
@@ -156,7 +156,7 @@ html{
     height: auto;    
 }
 
-.info3{
+.Info3{
     
     width: 100%;
     height: 50%;
@@ -174,12 +174,12 @@ html{
     
 }
 
-.info3 h2{
+.Info3 h2{
     margin-left: 45%;
     font-size: 32px;
     
 }
-.info3 p{
+.Info3 p{
     margin-left: 5%;
     overflow: auto;
 }
@@ -189,7 +189,7 @@ html{
     height: auto;    
 }
 
-.info4{
+.Info4{
     
     width: 100%;
     height: 50%;
@@ -207,12 +207,12 @@ html{
     
 }
 
-.info4 h2{
+.Info4 h2{
     margin-left: 35%;
     font-size: 32px;
     
 }
-.info4 p{
+.Info4 p{
     margin-left: 5%;
    
 }
@@ -222,7 +222,7 @@ html{
     height: auto;    
 }
 
-.info5{
+.Info5{
     
     width: 100%;
     height: 50%;
@@ -240,12 +240,12 @@ html{
     
 }
 
-.info5 h2{
+.Info5 h2{
     margin-left: 35%;
     font-size: 32px;
     
 }
-.info5 p{
+.Info5 p{
     margin-left: 5%;
     
 }
@@ -255,18 +255,40 @@ html{
     height: auto;    
 }
 
+#ScrollToTop{
+  display: none;
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: 2px solid green; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgba(44, 44, 44, 0.575); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+
+}
+
+
+.Footer{
+    position: fixed;
+}
+
 @media screen and (max-width: 1500px) {
-    .space{
+    .Space{
         font-size: 46px;    
     }
 
-    .intel{
+    .Intel{
         font-size: 46px;
         margin-top: -5%;
         margin-left: 20%;
     }
 
-    .background {
+    .Background {
         display: block;
         
     }
@@ -274,19 +296,19 @@ html{
 }
 
 @media screen and (max-width: 600px) {
-    .space{
+    .Space{
         font-size: 46px;
         height: 10%;    
     }
 
-    .intel{
+    .Intel{
         font-size: 46px;
         margin-top: -10%;
         margin-left: 7%;
         height: 10%;
     }
 
-    .background {
+    .Background {
         display: block;
         
     }

@@ -60,7 +60,7 @@ html{
     src: url(Fonts/Agelast-mLlAm.otf);
   }
 
-.blog1{
+.Blog1{
     width: 60%;
     height: 60%;
     background-color: rgb(250, 225, 0);
@@ -72,38 +72,38 @@ html{
     padding: 20px 20px;
 }
 
-.blog1 h2{
+.Blog1 h2{
     font-family: BlogFont;
 }
 
-.blog1 h1{
+.Blog1 h1{
     font-family: BlogFont;
     font-size: 46px;
 }
 
-.blog1 p{
+.Blog1 p{
     font-family: ComfortFont;
 }
 
-.blog1 a{
+.Blog1 a{
  font-family: ComfortFont;
 }
 
 
-.blog1:hover{
+.Blog1:hover{
     background-color: rgba(44, 44, 44, 0.575);
     transition: 0.8s;
     border-radius: 20px;
     cursor: pointer;
 }
 
-.blog1:not(:hover){
+.Blog1:not(:hover){
     background-color: rgba(26, 26, 26, 0.5);
     transition: 0.8s;
     border-radius: 20px;
 }
 
-.blog2{
+.Blog2{
     width: 60%;
     height: 20%;
     background-color: rgba(26, 26, 26, 0.5);
@@ -118,27 +118,27 @@ html{
     
 }
 
-.blog2:hover{
+.Blog2:hover{
     background-color: rgba(44, 44, 44, 0.575);
     transition: 0.8s;
     border-radius: 20px;
     
 }
 
-.blog2:not(:hover){
+.Blog2:not(:hover){
     background-color: rgba(26, 26, 26, 0.5);
     transition: 0.8s;
     border-radius: 20px;
 }
 
-.intext2{
+.Intext2{
     margin-left: 5%;
 }
-.blog2 h2{
+.Blog2 h2{
     font-family: BlogFont;
 }
 
-.blog2 p{
+.Blog2 p{
     font-family: ComfortFont;
 }
 
@@ -147,14 +147,14 @@ html{
     color: rgb(250, 225, 0);
 }
 
-#img1{
+#Img1{
  margin-right: 8%;
  width: 40%;
 height: 90%; 
 margin-top: 3%;
 }
 
-.intext{
+.Intext{
     margin-top: 20%;
     padding: 5px 10px;
 }
@@ -190,14 +190,14 @@ margin-top: 3%;
  
 }
 
-#img2{
+#Img2{
     width: 25%;
     height: auto;
 }
 
 
 
-#active{
+#Active{
     color: rgb(255, 230, 1);
    
    
