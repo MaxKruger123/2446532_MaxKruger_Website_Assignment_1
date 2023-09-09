@@ -37,8 +37,8 @@ html{
    box-shadow: 0 0 25px 25px;
 }
 
-.Header button{
-    margin-top: 1%;
+.Header a{
+    margin-top: 10%;
     text-decoration:none;
     background: none;
     border: none;
@@ -47,6 +47,10 @@ html{
     font-family: HeaderFont;
     font-size: 18px;
 
+}
+
+#navigation{
+    margin-top: 1%;
 }
 
 
@@ -87,7 +91,7 @@ html{
     
    }
 
-#active{
+Header nav .Active{
     color: rgb(255, 230, 1);
    
    
@@ -316,28 +320,28 @@ html{
 }
 
 @media screen and (max-width: 1025px) {
-    .Header button{
+    .Header a{
         margin-left: 15%;
     }
 
 }
 
 @media screen and (max-width: 700px) {
-    .Header button{
+    .Header a{
         margin-left: 10%;
     }
 
 }
 
 @media screen and (max-width: 550px) {
-    .Header button{
+    .Header a{
         margin-left: 4%;
     }
 
 }
 
 @media screen and (max-width: 430px) {
-    .Header button{
+    .Header a{
         margin-left: 1%;
         font-size: 12px;
     }

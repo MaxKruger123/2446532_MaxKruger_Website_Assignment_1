@@ -37,7 +37,7 @@ html{
    box-shadow: 0 0 25px 25px;
 }
 
-.Header button{
+.Header a{
     margin-top: 1%;
     text-decoration:none;
     background: none;
@@ -122,9 +122,10 @@ html{
     height: 100%;
 }
 
-.StyleGuide h1{
+.StyleGuide h5{
     font-family: HeaderFont;
     margin-left: 45%;
+    font-size: 36px;
 }
 
 .StyleGuide p{
@@ -154,6 +155,18 @@ html{
       position: fixed;
   }
 
+  h3{
+    font-family: BlogFont;
+    font-size: 24px;
+    margin-left: 38%;
+  }
+
+  h4{
+    font-family: BlogFont;
+    font-size: 24px;
+    margin-left: 30%;
+  }
+
 
 @font-face {
     font-family: BlogFont;
@@ -181,9 +194,11 @@ html{
 
 
 
+Header nav{
+    margin-top: 1%;
+}
 
-
-#Active{
+Header nav .Active{
     color: rgb(255, 230, 1);
    
    
@@ -231,28 +246,28 @@ html{
 }
 
 @media screen and (max-width: 1025px) {
-    .Header button{
+    .Header a{
         margin-left: 15%;
     }
 
 }
 
 @media screen and (max-width: 700px) {
-    .Header button{
+    .Header a{
         margin-left: 10%;
     }
 
 }
 
 @media screen and (max-width: 550px) {
-    .Header button{
+    .Header a{
         margin-left: 4%;
     }
 
 }
 
 @media screen and (max-width: 430px) {
-    .Header button{
+    .Header a{
         margin-left: 1%;
         font-size: 12px;
     }
