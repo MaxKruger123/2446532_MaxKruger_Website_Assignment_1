@@ -1,37 +1,43 @@
 fetch ("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=rJrm96uIegrcAokW4gwHWXgSFcvGnVHmrxOonrSf")
 .then((r) => r.json())
 .then(data => {
-    console.log(data); // logs the data file
+    
 
     const neoData = data.near_earth_objects["2015-09-07"];
 
     const names = neoData.map((neo) => neo.name);
     const diameter = neoData.map((neo) => neo.estimated_diameter.meters.estimated_diameter_max);
 
-    let cometYear =[
-        {x: 2002, y: diameter[0]},
-        {x: 2015, y: diameter[1]},
-        {x: 2015, y: diameter[2]},
-        {x: 2015, y: diameter[3]},
-        {x: 2015, y: diameter[4]},
-        {x: 2015, y: diameter[5]},
-        {x: 2015, y: diameter[6]},
-        {x: 2016, y: diameter[7]},
-        {x: 2016, y: diameter[8]},
-        {x: 2018, y: diameter[9]},
-        {x: 2019, y: diameter[10]},
-        {x: 2020, y: diameter[11]},
-        {x: 2020, y: diameter[12]},
+    const speed = neoData.map((neo) => neo.close_approach_data[0].relative_velocity.kilometers_per_second);
+
+    console.log(speed);
+
+    let cometSpeed =[
+        {x:diameter[0], y: speed[0]},
+        {x:diameter[1], y: speed[1]},
+        {x:diameter[2], y: speed[2]},
+        {x:diameter[3], y: speed[3]},
+        {x:diameter[4], y: speed[4]},
+        {x:diameter[5], y: speed[5]},
+        {x:diameter[6], y: speed[6]},
+        {x:diameter[7], y: speed[7]},
+        {x:diameter[8], y: speed[8]},
+        {x:diameter[9], y: speed[9]},
+        {x:diameter[10], y: speed[10]},
+        {x:diameter[11], y: speed[11]},
+        {x:diameter[12], y: speed[12]}
+
+        
 
     ]
 
-   
+    console.log(cometSpeed[8]);
 
     let margin = 0;
     let topMargin = 460;
-    let vizArea = d3.select('#Viz')
-    let xScale = d3.scaleLinear().domain([2002, 2020]).range([0, 700]);
-    let yScale = d3.scaleLinear().domain([0, 712]).range([500, 0]);
+    let vizArea = d3.select('#Viz2')
+    let yScale = d3.scaleLinear().domain([0, 40]).range([500, 0]);
+    let xScale = d3.scaleLinear().domain([0, 712]).range([0, 700]);
 
     
 
@@ -49,7 +55,7 @@ fetch ("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=201
 
     vizArea
     .selectAll('dots')
-    .data(cometYear)
+    .data(cometSpeed)
     .enter()
     .append("circle")
     .attr("cx", function(d){

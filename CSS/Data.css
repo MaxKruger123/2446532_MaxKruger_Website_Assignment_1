@@ -80,8 +80,24 @@ html{
 #Viz{
     margin-left: 25%;
     margin-top: 30%;
-    width:800px;
-    height: 600px;
+    width:713px;
+    height: 520px;
+    padding: 20px;
+    background-color: rgba(44, 44, 44, 0.575);
+    border-radius: 25px;
     color: white;
     fill: rgb(207, 73, 20);
+}
+
+#Viz2{
+    margin-left: 25%;
+    margin-top: 30%;
+    width:713px;
+    height: 520px;
+    padding: 20px;
+    background-color: rgba(44, 44, 44, 0.575);
+    border-radius: 25px;
+    color: white;
+    fill: rgb(207, 73, 20);
+    
 }
