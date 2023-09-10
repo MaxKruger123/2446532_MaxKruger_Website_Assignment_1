@@ -2,6 +2,7 @@ const navigationData = [
     { name: 'HomePlanet', url: 'index.html' },
     { name: 'The Blog hole', url: 'Blogs.html' },
     { name: 'Designing Mars', url: 'Design.html' },
+    { name: 'Data Visualization', url: 'Data.html' },
    
   ];
 
