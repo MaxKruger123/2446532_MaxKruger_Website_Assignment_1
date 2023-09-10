@@ -2,7 +2,7 @@ body{
     
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: whitesmoke;
+    background-color: black;
     margin: 0;
     height: 1000px;
     width: 100%;
@@ -75,4 +75,13 @@ html{
     color: rgb(255, 230, 1);
    
    
+}
+
+#Viz{
+    margin-left: 25%;
+    margin-top: 30%;
+    width:800px;
+    height: 600px;
+    color: white;
+    fill: rgb(207, 73, 20);
 }
