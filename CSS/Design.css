@@ -79,9 +79,38 @@ html{
     font-family: BlogFont;
 }
 
+.WireFrames h3{
+    margin-left: 40%;
+    font-size: 24px;
+    font-family: HeaderFont;
+}
+
+
+.WireFrames h4{
+    margin-left: 40%;
+    font-size: 24px;
+    font-family: HeaderFont;
+}
+
+.WireFrames h5{
+    margin-left: 37%;
+    font-size: 24px;
+    font-family: HeaderFont;
+}
+
+.WireFrames h6{
+    margin-left: 37%;
+    font-size: 24px;
+    font-family: HeaderFont;
+}
+
+
+
 .WireFrames p{
     font-family: ComfortFont;
     line-height: 30px;
+    width: 50%;
+    margin-left: 25%;
 }
 
 #IndexImg{
@@ -119,7 +148,7 @@ html{
     width: 85%;
     margin-left: 5%;
     border-radius: 30px;
-    height: 100%;
+    height: 110%;
 }
 
 .StyleGuide h5{
@@ -131,6 +160,8 @@ html{
 .StyleGuide p{
     font-family: ComfortFont;
     line-height: 30px;
+    width: 50%;
+    margin-left: 30%;
 }
 
 #ScrollToTop{
