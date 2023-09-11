@@ -29,12 +29,35 @@
 
     </header>
 
-    <section class="content">
+    <section class="Background">
 
-    <svg id="Viz"></svg>
-    <svg id="Viz2"></svg>
+        <h1>Data Visualization</h1>
+        <p>This is the Data Visualization section of the website where I go through my currently 2 different data scatter plot graphs and explain what they are and how they are used. Simply Scroll down and read for more information! My visualizations are all about COMETS! Or are they aliens??? Either way We are here in the interest of everyting large and small in space.</p>
+        <h2>Visualization 1</h2>
+        <p>Both of my visualizations use scatter plots since this was a steep learning curve for me but I still managed. The API used to get my data is NASA's Open API called Asteroids - NeoWs. Basically this APi tracks any objects that are near our planet and gatheres a bunch of different data on each object. Data such as its diameter, velocity, mass and much more! With all of this information I was able to create a scatter plot that shows the year the object was detected and how close to the earth it was on the X axis and the approximate diameter of the object on the Y axis. This was quite interesting because creating the visuaization made me realise that 2015 was a popularyear for objects to fly past earth.</p>
+
+        <p>This still leaves a realy important question that noone can answer, what are these objects that are flying eveywhere around us and why did it happen so much in 2015?</p>
+
+        
+        
+        <svg id="Viz"></svg>
+
+        <h3>Visualization 2</h3>
+        <p>The second visualization is more interesting than the first. The second visualization uses the data of the objects relative velocity and the estimated velocity. My goal with this was to see if there was a relationship between the 2 in any way. Turns out I think there might be! With the data from NASA's API and thanks to my graphic, It seems like the smaller an objects diameter is, the faster it gains relative velocity per second.</p>
+
+        <svg id="Viz2"></svg>
+
+        <p>So those were pretty cool right? Although those are probably just space rocks that have been flying for years and years its quite crazy to think that many of them werent far off from hitting earth. A small rock of 3 metres travelling at 20 km/s would do a lot of damage if it hit anywhere near a city. But atleast these rocks provide us humans with the satifactory view of a meteor shower where we make a wish.</p>
+        <img src="CSS/images/meteorShower.jpg" alt="Image of Meteor Shower" class="u-photo Img">
+
 
     </section>
+
+    <footer class="Footer">
+    
+        <button onclick="topFunction()" id="ScrollToTop" title="Go to top">Back To Top</button>
+    
+    </footer>
 
     
 
@@ -43,4 +66,5 @@
 <script src="JS/nav.js"></script>
 <script src="JS/Visualization.js"></script>
 <script src="JS/Visualization2.js"></script>
+<script src="JS/Scroll.js"></script>
 </html>

@@ -305,3 +305,7 @@ Header nav{
     font-size: 16px;
     transition: 0.5s;
 }
+
+#CheckOut{
+    font-family: ComfortFont;
+}

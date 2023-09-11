@@ -38,6 +38,7 @@ fetch ("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=201
     let vizArea = d3.select('#Viz2')
     let yScale = d3.scaleLinear().domain([0, 40]).range([500, 0]);
     let xScale = d3.scaleLinear().domain([0, 712]).range([0, 700]);
+    let svg = d3.select("#Viz2");
 
     
 
@@ -52,6 +53,22 @@ fetch ("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=201
     .append('g')
     .attr("transform", `translate( ${margin} , 500 )`)
     .call(d3.axisBottom(xScale));
+
+    svg.append("text")
+     .attr("class", "x label")
+     .attr("text-anchor", "end")
+     .attr("x", 450)
+     .attr("y", 490)
+     .text("Estimated Diameter (m)");
+
+     svg.append("text")
+    .attr("class", "y label")
+    .attr("text-anchor", "end")
+    .attr("y", 6)
+    .attr("x", 0.1)
+    .attr("dy", "3em")
+    .attr("transform", "rotate(-90)")
+    .text("Velocity (km/s)");
 
     vizArea
     .selectAll('dots')

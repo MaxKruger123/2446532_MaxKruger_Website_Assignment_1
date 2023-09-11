@@ -32,6 +32,7 @@ fetch ("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=201
     let vizArea = d3.select('#Viz')
     let xScale = d3.scaleLinear().domain([2002, 2020]).range([0, 700]);
     let yScale = d3.scaleLinear().domain([0, 712]).range([500, 0]);
+    let svg = d3.select("#Viz");
 
     
 
@@ -46,6 +47,23 @@ fetch ("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=201
     .append('g')
     .attr("transform", `translate( ${margin} , 500 )`)
     .call(d3.axisBottom(xScale));
+
+     svg.append("text")
+     .attr("class", "x label")
+     .attr("text-anchor", "end")
+     .attr("x", 360)
+     .attr("y", 490)
+     .text("Year");
+
+     svg.append("text")
+    .attr("class", "y label")
+    .attr("text-anchor", "end")
+    .attr("y", 6)
+    .attr("x", 0.1)
+    .attr("dy", "3em")
+    .attr("transform", "rotate(-90)")
+    .text("Estimated Diameter (m)");
+
 
     vizArea
     .selectAll('dots')
