@@ -31,7 +31,7 @@ fetch ("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=201
 
     ]
 
-    console.log(cometSpeed[8]);
+   
 
     let margin = 0;
     let topMargin = 460;
