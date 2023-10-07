@@ -102,6 +102,19 @@ html{
     
 }
 
+#Viz3{
+  margin-left: 27%;
+  margin-top: 5%;
+  width:713px;
+  height: 520px;
+  padding: 50px;
+  background-color: rgba(44, 44, 44, 0.575);
+  border-radius: 25px;
+  color: white;
+  fill: rgb(207, 73, 20);
+  
+}
+
 #ScrollToTop{
     display: none;
     position: fixed; /* Fixed/sticky position */
