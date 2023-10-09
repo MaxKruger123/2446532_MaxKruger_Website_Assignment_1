@@ -17,13 +17,21 @@ fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015
             .append("g")
             .attr("transform", "translate(0,0)")
 
-        var radiusScale = d3.scaleLinear().domain([3, 715]).range([10, 80])
+            
+        
 
         // Initialize the circles at the center
         var cometSpeed = neoData.map(neo => ({
             x: parseFloat(neo.estimated_diameter.meters.estimated_diameter_max), // Parse as a number
             y: parseFloat(neo.close_approach_data[0].relative_velocity.kilometers_per_second) // Parse as a number
         }));
+
+        console.log("Min diameter:", d3.min(cometSpeed, d => d.x));
+            console.log("Max diameter:", d3.max(cometSpeed, d => d.x));
+
+            var radiusScale = d3.scaleLinear()
+            .domain([d3.min(cometSpeed, d => d.x), d3.max(cometSpeed, d => d.x)])
+            .range([10, 80]);
 
         var simulation = d3.forceSimulation()
             .force("x", d3.forceX(width / 2).strength(0.1))
