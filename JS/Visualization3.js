@@ -7,10 +7,10 @@ fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015
         const diameter = neoData.map((neo) => neo.estimated_diameter.meters.estimated_diameter_max);
         const speed = neoData.map((neo) => neo.close_approach_data[0].relative_velocity.kilometers_per_second);
 
-        var width = 713;
-        var height = 520;
+        const width = 713;
+        const height = 520;
 
-        var svg = d3.select("#Viz3")
+        const svg = d3.select("#Viz3")
             .append("svg")
             .attr("height", height)
             .attr("width", width)
@@ -21,7 +21,7 @@ fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015
         
 
         // Initialize the circles at the center
-        var cometSpeed = neoData.map(neo => ({
+        const cometSpeed = neoData.map(neo => ({
             x: parseFloat(neo.estimated_diameter.meters.estimated_diameter_max), // Parse as a number
             y: parseFloat(neo.close_approach_data[0].relative_velocity.kilometers_per_second) // Parse as a number
         }));
@@ -29,18 +29,18 @@ fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015
         console.log("Min diameter:", d3.min(cometSpeed, d => d.x));
             console.log("Max diameter:", d3.max(cometSpeed, d => d.x));
 
-            var radiusScale = d3.scaleLinear()
+            let radiusScale = d3.scaleLinear()
             .domain([d3.min(cometSpeed, d => d.x), d3.max(cometSpeed, d => d.x)])
             .range([10, 80]);
 
-        var simulation = d3.forceSimulation()
+        let simulation = d3.forceSimulation()
             .force("x", d3.forceX(width / 2).strength(0.1))
             .force("y", d3.forceY(height / 2).strength(0.1))
             .force("collide", d3.forceCollide(function (d) {
                 return radiusScale(d.x)
             }))
 
-        var circles = svg.selectAll(".comets")
+        let circles = svg.selectAll(".comets")
             .data(cometSpeed)
             .enter().append("circle")
             .attr("class", "comets")
@@ -55,7 +55,7 @@ fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015
                     .duration(200) // Duration of the transition in milliseconds
                     .attr("fill", "purple"); // New color on hover
                 // Show tooltip on mouseover
-                var tooltip = d3.select("#tooltip");
+                let tooltip = d3.select("#tooltip");
                 tooltip.transition()
                     .duration(200)
                     .style("opacity", 0.9);
@@ -70,14 +70,14 @@ fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015
                     .duration(200)
                     .attr("fill", "yellow"); // Original color on mouseout
                 // Hide tooltip on mouseout
-                var tooltip = d3.select("#tooltip");
+                let tooltip = d3.select("#tooltip");
                 tooltip.transition()
                     .duration(500)
                     .style("opacity", 0);
             });
 
         // Create the tooltip element
-        var tooltip = d3.select("body")
+        let tooltip = d3.select("body")
             .append("div")
             .attr("id", "tooltip")
             .style("position", "absolute")

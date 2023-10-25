@@ -23,13 +23,13 @@ fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015
             { x: diameter[12], y: speed[12] }
         ];
 
-        let margin = 60;
-        let topMargin = 460;
-        let bottomMargin = 50;
-        let vizArea = d3.select('#Viz2');
-        let yScale = d3.scaleLinear().domain([0, 40]).range([500, 0]);
-        let xScale = d3.scaleLinear().domain([0, 712]).range([0, 700]);
-        let svg = d3.select("#Viz2");
+        const margin = 60;
+        const topMargin = 460;
+        const bottomMargin = 50;
+        const vizArea = d3.select('#Viz2');
+        const yScale = d3.scaleLinear().domain([0, 40]).range([500, 0]);
+        const xScale = d3.scaleLinear().domain([0, 712]).range([0, 700]);
+        const svg = d3.select("#Viz2");
 
         // Append Y-axis on the left
        // Append Y-axis on the left with ticks on the outside
