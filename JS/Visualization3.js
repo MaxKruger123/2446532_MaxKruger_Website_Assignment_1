@@ -1,12 +1,7 @@
 fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=rJrm96uIegrcAokW4gwHWXgSFcvGnVHmrxOonrSf")
     .then((r) => r.json())
     .then(data => {
-
         const neoData = data.near_earth_objects["2015-09-07"];
-        const names = neoData.map((neo) => neo.name);
-        const diameter = neoData.map((neo) => neo.estimated_diameter.meters.estimated_diameter_max);
-        const speed = neoData.map((neo) => neo.close_approach_data[0].relative_velocity.kilometers_per_second);
-
         const width = 713;
         const height = 520;
 
@@ -15,21 +10,14 @@ fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015
             .attr("height", height)
             .attr("width", width)
             .append("g")
-            .attr("transform", "translate(0,0)")
+            .attr("transform", "translate(0,0)");
 
-            
-        
-
-        // Initialize the circles at the center
         const cometSpeed = neoData.map(neo => ({
-            x: parseFloat(neo.estimated_diameter.meters.estimated_diameter_max), // Parse as a number
-            y: parseFloat(neo.close_approach_data[0].relative_velocity.kilometers_per_second) // Parse as a number
+            x: parseFloat(neo.estimated_diameter.meters.estimated_diameter_max),
+            y: parseFloat(neo.close_approach_data[0].relative_velocity.kilometers_per_second)
         }));
 
-        console.log("Min diameter:", d3.min(cometSpeed, d => d.x));
-            console.log("Max diameter:", d3.max(cometSpeed, d => d.x));
-
-            let radiusScale = d3.scaleLinear()
+        let radiusScale = d3.scaleLinear()
             .domain([d3.min(cometSpeed, d => d.x), d3.max(cometSpeed, d => d.x)])
             .range([10, 80]);
 
@@ -37,8 +25,8 @@ fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015
             .force("x", d3.forceX(width / 2).strength(0.1))
             .force("y", d3.forceY(height / 2).strength(0.1))
             .force("collide", d3.forceCollide(function (d) {
-                return radiusScale(d.x)
-            }))
+                return radiusScale(d.x);
+            }));
 
         let circles = svg.selectAll(".comets")
             .data(cometSpeed)
@@ -49,12 +37,10 @@ fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015
             })
             .attr("fill", "yellow")
             .on("mouseover", function (d) {
-                // Smoothly transition to a different color on mouseover
                 d3.select(this)
                     .transition()
-                    .duration(200) // Duration of the transition in milliseconds
-                    .attr("fill", "purple"); // New color on hover
-                // Show tooltip on mouseover
+                    .duration(200)
+                    .attr("fill", "purple");
                 let tooltip = d3.select("#tooltip");
                 tooltip.transition()
                     .duration(200)
@@ -64,19 +50,16 @@ fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015
                     .style("top", (d3.event.pageY - 28) + "px");
             })
             .on("mouseout", function (d) {
-                // Smoothly transition back to the original color on mouseout
                 d3.select(this)
                     .transition()
                     .duration(200)
-                    .attr("fill", "yellow"); // Original color on mouseout
-                // Hide tooltip on mouseout
+                    .attr("fill", "yellow");
                 let tooltip = d3.select("#tooltip");
                 tooltip.transition()
                     .duration(500)
                     .style("opacity", 0);
             });
 
-        // Create the tooltip element
         let tooltip = d3.select("body")
             .append("div")
             .attr("id", "tooltip")
@@ -89,18 +72,68 @@ fetch("https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015
             .style("opacity", 0);
 
         simulation.nodes(cometSpeed)
-            .on('tick', ticked)
+            .on('tick', ticked);
 
         function ticked() {
             circles
                 .attr("cx", function (d) {
-                    return d.x
+                    return d.x;
                 })
                 .attr("cy", function (d) {
-                    return d.y
-                })
+                    return d.y;
+                });
         }
 
+        // Add the "Highlight Largest" button
+d3.select("#Viz3")
+.append("button")
+.text("Largest Meteor")
+.attr("class", "button") // Apply the "button" class
+.on("click", highlightLargest);
+
+// Add the "Highlight Smallest" button
+d3.select("#Viz3")
+.append("button")
+.text("Smallest Meteor")
+.attr("class", "button") // Apply the "button" class
+.on("click", highlightSmallest);
+
+// Add the "Clear" button
+d3.select("#Viz3")
+.append("button")
+.text("Clear")
+.attr("class", "button") // Apply the "button" class
+.on("click", clearHighlight);
+
+        function highlightLargest() {
+            const largestDiameter = d3.max(cometSpeed, d => d.x);
+            const largestBubble = cometSpeed.find(d => d.x === largestDiameter);
+
+            circles
+                .filter(d => d === largestBubble)
+                .transition()
+                .duration(200)
+                .attr("fill", "red");
+        }
+
+        function highlightSmallest() {
+            const smallestDiameter = d3.min(cometSpeed, d => d.x);
+            const smallestBubble = cometSpeed.find(d => d.x === smallestDiameter);
+
+            circles
+                .filter(d => d === smallestBubble)
+                .transition()
+                .duration(200)
+                .attr("fill", "green");
+        }
+
+        function clearHighlight() {
+            // Reset the fill color of all bubbles to "yellow"
+            circles
+                .transition()
+                .duration(200)
+                .attr("fill", "yellow");
+        }
     })
     .catch(error => {
         console.error('Can\'t fetch data', error);
