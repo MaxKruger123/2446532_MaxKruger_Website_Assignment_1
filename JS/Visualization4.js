@@ -1,21 +1,43 @@
-// Replace 'YOUR_API_KEY' with your actual NASA API key
-const apiKey = 'rJrm96uIegrcAokW4gwHWXgSFcvGnVHmrxOonrSf';
-
 // Define the API endpoint URL
-const apiUrl = `https://api.nasa.gov/insight_weather/?api_key=${apiKey}&feedtype=json&ver=1.0`;
+const apiUrl = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos";
 
-// Fetch data from the NASA API
-fetch(apiUrl)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then((data) => {
-    // Process and use the retrieved data here
+// Define your API key (replace 'DEMO_KEY' with your actual API key)
+const apiKey = "rJrm96uIegrcAokW4gwHWXgSFcvGnVHmrxOonrSf";
+
+// Define the sol (Martian day) for which you want to retrieve photos
+const sol = 650; // You can change this to the desired sol value
+
+// Construct the full URL with query parameters
+const fullUrl = `${apiUrl}?api_key=${apiKey}&sol=${sol}`;
+
+// Use the fetch function to make the API request
+fetch(fullUrl)
+  .then(response => response.json())
+  .then(data => {
+    // Process the data here
     console.log(data);
+    const photoCollageSection = document.getElementById("PhotoCollage");
+
+    // Limit the number of photos to display (e.g., the first 10 photos)
+    const numPhotosToDisplay = 15;
+
+    for (let i = 0; i < numPhotosToDisplay; i++) {
+      if (data.photos[i]) {
+        const photo = data.photos[i];
+        const imageUrl = photo.img_src;
+        const imageElement = document.createElement("img");
+      
+        // Assign a unique id to each image
+        imageElement.id = `image-${i}`;
+        imageElement.src = imageUrl;
+
+        // Append the image to the section
+        photoCollageSection.appendChild(imageElement);
+      }
+    }
+
   })
-  .catch((error) => {
-    console.error('Can\'t fetch data', error);
+  .catch(error => {
+    // Handle any errors that occur during the request
+    console.error("Error fetching data:", error);
   });

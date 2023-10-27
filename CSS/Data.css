@@ -172,3 +172,50 @@ html{
     margin-right: 10px;
   }
 
+  .PhotoCollage{
+    position: relative;
+  width: 800px; /* Set the desired width for your collage */
+  height: 600px; /* Set the desired height for your collage */
+  }
+
+  #PhotoCollage img {
+    position: absolute;
+    max-width: 20%;
+  }
+
+  #CollageContainer{
+    position: relative;
+    height: 110%;
+    width: 90%;
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  #image-0 {
+    top: 50%; /* Position the image vertically at 50% of the parent's height */
+    left: 50%; /* Position the image horizontally at 50% of the parent's width */
+    transform: translate(-50%, -50%); /* Center the image within its parent */
+    z-index: 1; /* Adjust z-index for stacking order */
+  }
+
+  #image-1 {
+    top: 40%; /* Position the image vertically at 50% of the parent's height */
+    left: 30%; /* Position the image horizontally at 50% of the parent's width */
+    
+    z-index: 2; /* Adjust z-index for stacking order */
+  }
+ 
+  #image-2 {
+    top: 60%; /* Position the image vertically at 50% of the parent's height */
+    left: 70%; /* Position the image horizontally at 50% of the parent's width */
+    
+    z-index: 2; /* Adjust z-index for stacking order */
+  }
+
+  #image-3 {
+    top: 20%; /* Position the image vertically at 50% of the parent's height */
+    left: 20%; /* Position the image horizontally at 50% of the parent's width */
+    
+    z-index: 2; /* Adjust z-index for stacking order */
+  }
