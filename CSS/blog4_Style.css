@@ -1,0 +1,276 @@
+body{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    margin: 0;
+    height: 1000px;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+html{
+    width: 100%;
+}
+
+.background{    
+    margin-top: 5%;
+    height: 70%;
+    width: 100%;
+    
+    color: black;
+    
+    display: block;    
+}
+
+.Header{
+   height: 70px;
+   position: fixed;
+   display: inline;
+  
+   width: 100%;
+   backdrop-filter: blur(5px);
+   background-color: rgba(0, 0, 0, 0.336);
+   box-shadow: 0 0 25px 25px;
+}
+
+.Header a{
+    margin-top: 1%;
+    text-decoration:none;
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 14%;
+    font-family: HeaderFont;
+    font-size: 18px;
+
+}
+
+.Header nav{
+    margin-top: 1%;
+}
+
+.Info{
+    display: block;
+    color: white;
+    width: 70%;
+    margin-left: 15%;
+    height: 3500px;
+    background-color: rgba(26, 26, 26, 0.5);
+}
+
+#Img1{
+    width: 40%;
+    height: auto;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+#Heading{
+    font-family: BlogFont;
+    margin-left: 27%;
+}
+
+#Intext{
+    padding: 40px 40px;
+    font-family: ComfortFont;
+    line-height: 30px;
+}
+
+#img3{
+    margin-left: 10%;
+}
+
+
+@font-face {
+    font-family: BlogFont;
+    src: url(Fonts/Agelast-mLlAm.otf);
+  }
+
+
+
+@font-face {
+    font-family: Entanglement;
+    src: url(Fonts/Entanglement-rgpRB.ttf);
+  }
+
+  @font-face {
+    font-family: HeaderFont;
+    src: url(Fonts/Vonique\ 92_D.otf);
+  }
+
+  @font-face {
+    font-family: ComfortFont;
+    src: url(Fonts/Comfortaa-Light.ttf);
+  }
+
+
+
+
+
+Header nav .Active{
+    color: rgb(255, 230, 1);
+   
+   
+}
+
+#Return{
+    color: rgb(255, 230, 1);
+    background-color: rgb(65, 64, 64);
+    border: none;
+    padding: 20px 30px;
+    border-radius: 8px;
+    margin-left: -60%;
+    margin-top: 5%;
+}
+
+#Return:hover{
+    padding: 30px 40px;
+    transition: 0.5s;
+}
+
+#Return:not(:hover){
+    padding: 20px 30px;
+    transition: 0.5s;
+}
+
+#Details{
+    margin: 5%;
+    font-family: ComfortFont;
+}
+
+#ScrollToTop{
+    display: none;
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: 2px solid green; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgba(44, 44, 44, 0.575); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  
+  }
+  
+  
+  .Footer{
+      position: fixed;
+  }
+
+@media screen and (max-width: 1500px) {
+    .space{
+        font-size: 46px;    
+    }
+
+    .intel{
+        font-size: 46px;
+        margin-top: -5%;
+        margin-left: 20%;
+    }
+
+    .background {
+        display: block;
+        
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .space{
+        font-size: 46px;
+        height: 10%;    
+    }
+
+    .intel{
+        font-size: 46px;
+        margin-top: -10%;
+        margin-left: 7%;
+        height: 10%;
+    }
+
+    .background {
+        display: block;
+        
+    }
+
+}
+
+@media screen and (max-width: 1025px) {
+    .Header a{
+        margin-left: 15%;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .Header a{
+        margin-left: 10%;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .Header a{
+        margin-left: 4%;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .Header a{
+        margin-left: 1%;
+        font-size: 12px;
+    }
+
+}
+
+#HomePage:hover{
+    
+    
+    color: rgb(255, 230, 1);
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.Design:hover{
+    
+    
+    color: rgb(255, 230, 1);
+    font-size: 20px;
+    transition: 0.5s;
+    
+}
+
+#HomePage:not(:hover){
+    
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.Design:not(:hover){
+    
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+#Active:hover{
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+#Active:not(:hover){
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+p{
+    width: 60%;
+    margin-left: 19%;
+}

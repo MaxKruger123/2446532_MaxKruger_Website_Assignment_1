@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The home page of Space intel's website where I have a range of different pages all about learning data visualization and the developpment of this page.">
+    <meta name="keywords" content="Blogs, Data, Visualization, UI, UX">
+    <meta name="author"  content="Max Kruger">
+    
+    
+    <title>Space-Intel Blogs</title>
+    <link rel="stylesheet" href="CSS/blog2_Style.css">
+    
+    
+</head>
+
+<body>
+
+    <header class="Header">  
+        <nav id="navigation">
+            <!-- Navigation links will be added here dynamically -->
+          </nav>  
+
+    </header>
+
+    <article class="Info e-content">
+        <img src="CSS/images/fractals.jpg" alt="Data Visualization Image of fossil fuels" id="Img1" class="u-photo">
+        
+        <h2 id="Heading">Blog 4 - Data Driven Artwork</h2>
+        <p id="Intext" class="p-summary">
+            A “sol” is a solar day on Mars or also called a Mars Day. A Mars day is 24 hours, 37 minutes and 22 seconds. Using NASA’s API called ‘Mars Photo API’ I was able to fetch the photo data from a Mars rover robot that has taken thousands of photos since its day of landing. This way I have created the story of the 650th day that the mars rover has been on mars through an image collage. After reading Riche’s Data-Driven storytelling text, I found exactly how I wanted to layout my collage in order to reinforce my vision of the story of the 650th day on Mars. Riche states that perspective is important in that it can be portrayed from “varying distances” and different “perspectives” depending on the intended meaning (Riche et al., 2018). This made me realize that I can use the center of my collage as the beginning of the day and expand it outward as the day goes. Also, I then placed different pictures around my collage. Furthermore by varying the sizes and rotations of the images, I can focus the user's eye initially on the center of the collage and then pull it outwards, overall reinforcing my storytelling by smartly designing my user flow.
+
+<br><br>In Chapter three of Riche’s book, he uses three dimensions that consider flexibility and interpretation. The view of my collage involves the way in which the data is viewed, which in the context is through a collage of images, transformed through size and rotation. By presenting the images in a “specific order,” I convey my interpretation of the 650th day, however, this does not force the user to not have their own interpretation (Riche et al., 2018). Secondly, the focus involves the subject of the story, in our case, it  is the Mars rover and the images shown from the center focus, towards the corners of the collage. This further guides the focus of the user and supports the story (Riche et al., 2018).
+
+<br><br>However, using this API to create an image collage also can create performance issues. I realize that when fetching all of the data from the API, because there are thousands of images, it can cause a small wait time before the collage loads onto the website. Furthermore, these images are quite large, meaning that their file size will also be large, further causing a delay in the performance of the webpage. To counter this, I felt it was better that the user has to scroll far down the page before they get to my collage, meaning that there is other content for them to work through before they meet it. This at means that by the time the user reaches my collage, the collage would be fully loaded. 
+
+<br><br>Fortunately the images used on the 650th day actually tie in well into my website's aesthetic. Many of the images are black and white, which are the main colors used throughout my site. Some of the images have color, however I still believe that these coloured images allow for a color pop in my website and draws the users eye very quickly allowing me to use that to my advantage and place the coloured images strategically in my collage.
+
+<br><br>I feel that my Data Driven art work has equal strengths and weaknesses. Firstly, I feel that my collage allows for my own interpretation without restricting the users own interpretation of my collage, allowing for multiple stories to be told at once. However, at the same time, I feel that because my collage is not a linear story, and allows for varying interpretations, I fear that this may cause users to stray and they might get lost in the attempt to interpret the work (Riche et al., 2018).
+
+<br><br>There were some challenges in creating my collage, however, mostly to do with the coding aspect. My first issue was finding a good sol (mars day) in which there were good photos to use in my collage. My initial idea was to create a story of the first day the rover landed on mars, however, the rover took basically the same photo the entire day, which meant there wouldn't be much story to it. After searching many different soles I found the 650th day which has many different photos in different areas of mars. My next struggle was the structure of my section and photos. I needed to use appropriate code in order to put images exactly where I wanted them. This took a lot of experimenting but I figured out that using relative position on my collage section and then absolute on my images, I was able to shift them where I wanted to and enabled them to be responsive by using percentage values.
+
+            </p>
+
+
+              <details id="Details">
+                <summary>Reference List</summary>
+                <cite><p>Riche, N.H. et al. (2018) Data-driven storytelling. Boca Raton, FL: CRC Press. </p></cite>
+            </details>
+
+            
+
+            
+             
+    </article>
+
+    <footer class="Footer">
+    
+        <button onclick="topFunction()" id="ScrollToTop" title="Go to top">Back To Top</button>
+    
+    </footer>
+    
+</body>
+<script src="JS/nav.js"></script>
+<script src="JS/Scroll.js"></script>
+</html>
