@@ -32,7 +32,7 @@
     <section class="Background">
 
         <h1>Data Visualization</h1>
-        <p>This is the Data Visualization section of the website where I go through my currently 2 different data graphs and explain what they are and how they are used. Simply Scroll down and read for more information! My visualizations are all about COMETS! Or are they aliens??? Either way We are here in the interest of everyting large and small in space.</p>
+        <p>This is the Data Visualization section of the website where I go through my different data visualizations all themed around space. The first 3 Visuliazations are all about meteors that are flying across our earth each year. You can look at their diameters, speeds, the largest and smallest ones using my data visaulizations. The final 2 are Data-driven artworks, inspired by where humanity have stepped foot on and beyond. It shows us what is out there through images that have been caught by robotics and the human eye!</p>
         <h2>Visualization 1</h2>
         <p> The API used to get my data is NASA's Open API called Asteroids - NeoWs. Basically this API tracks any objects that are near our planet and gatheres a bunch of different data on each object. Data such as its diameter, velocity, mass and much more! With all of this information I was able to create a bar graph that shows the year the object was detected on the X axis and the approximate diameter of the object on the Y axis. This was quite interesting because creating the visuaization made me realise the differences in how large and small some of the asteroids were!</p>
 
@@ -40,21 +40,21 @@
 
         
         
-        <svg id="Viz"></svg>
-
+            <svg id="Viz"></svg>
+       
         <h3>Visualization 2</h3>
         <p>The second visualization is more interesting than the first. The second visualization uses the data of the objects relative velocity and the estimated velocity. My goal with this was to see if there was a relationship between the 2 in any way. Turns out I think there might be! With the data from NASA's API and thanks to my graphic, It seems like the smaller an objects diameter is, the faster it gains relative velocity per second.</p>
 
         <svg id="Viz2"></svg>
 
-        <h3>Interactive Data Viz</h3>
+        <h4>Interactive Data Viz</h4>
         <p>This data visualization is a much more fun way to represent data. This bubble chart is interactive! When you hover over each bubble it displays the comets diameter and speed. The bubbles themselves are sorted with simulation forces and their size is correlated to their comets diameter and speed.</p>
 
         <div id="Viz3"></div>
         
-        <h3>Data-Driven ArtWork</h3>
+        <h4>Data-Driven ArtWork</h4>
         <p>My next piece is my data driven art work that is based off of data using NASA's Mars photo API. The collage displays the story of the 650th day the mars rover has been on mars
-            Starting at the centre of the collage, the beginning of the day. I have smartly tried to capture and control the user flow to move from the centre of the collage to the corners. The corners being the end of the day.
+            Starting at the centre of the collage, the beginning of the day. I have smartly tried to capture and control the user flow to move from the centre of the collage to the corners. The corners being the end of the day. This shows us what was once mystery. Is mars really just a desert, and if so wat does it look like. Thanks to the mars rover we can all finally see what life looks like far far away.
         </p>
 
     <div id="CollageContainer">
@@ -65,16 +65,28 @@
 
     </div>
 
-    <h3>Exam Data-Driven ArtWork</h3>
+    <h4 id="ExamArtWork">Exam Data-Driven ArtWork</h4>
+    <p>Speaking of Far Far away, all of these photos are taken from NASA's APOD API which presents a daily photo of the marvelous images we have found in space. Some you can see with the naked eye if you are in the right part of the world and others can only be seen through the worlds strongest telescope. This gallery allows for you to click on the arrows on the left and right side in order to swap between the daily images ranging all the way back to the early 2000's. This gallery represents all that we have seen of space.</p>
+
+
     <div id="apodImageContainer">
 
         <div class="OverlayLeft" id="LeftOverlay"></div>
         <div class="OverlayRight" id="RightOverlay"></div>
+        
+        
 
+        
     </div>
 
-        <p>So those were pretty cool right? Although those are probably just space rocks that have been flying for years and years its quite crazy to think that many of them werent far off from hitting earth. A small rock of 3 metres travelling at 20 km/s would do a lot of damage if it hit anywhere near a city. But atleast these rocks provide us humans with the satifactory view of a meteor shower where we make a wish.</p>
-        <img src="CSS/images/meteorShower.jpg" alt="Image of Meteor Shower" class="u-photo Img">
+    <div id="apodContainer">
+        <p id="apodDate" class="PhotoDate"></p>
+        <div id="apod-description"></div>
+    </div>
+
+    <br><br><br>
+    
+       
 
 
 
@@ -97,6 +109,6 @@
 <script src="JS/Visualization2.js"></script>
 <script src="JS/Visualization3.js"></script>
 <script src="JS/Visualization4.js"></script>
-<script src="JS/Visualization5.js"></script>
 <script src="JS/Scroll.js"></script>
+<script src="JS/Visualization5.js"></script>
 </html>
